@@ -2,6 +2,8 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
 
+g_model = tf.keras.models.load_model('cgan_generator.h5')
+
 npt = 4000
 noise = np.random.randn(npt, 5)
 labels = np.random.randint(0,2,npt)
